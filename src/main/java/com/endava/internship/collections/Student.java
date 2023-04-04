@@ -1,7 +1,6 @@
 package com.endava.internship.collections;
 
 import java.time.LocalDate;
-import java.util.Comparator;
 import java.util.Objects;
 
 public class Student {
@@ -27,9 +26,6 @@ public class Student {
         return details;
     }
 
-    public int compareTo (Student student) {
-        return Comparator.comparing(Student::getName).thenComparing(Student::getDateOfBirth).compare(this, student);
-    }
 
     @Override
     public boolean equals (Object object) {
