@@ -8,6 +8,24 @@ import java.util.Objects;
 import java.util.Set;
 
 public class StudentMap implements Map<Student, Integer> {
+
+    static class Node {
+        Student key;
+        Integer value;
+        Node left;
+        Node right;
+
+        public Node (Student key, Integer value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        void set (Student student, Integer integer) {
+            key = student;
+            value = integer;
+        }
+    }
+
     private int size;
     private Node parent;
     private Node found;
